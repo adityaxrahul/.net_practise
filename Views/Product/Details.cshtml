@@ -1,0 +1,62 @@
+﻿@model Pratical_6_1.Models.Product
+
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+<div>
+
+    <h3>@Model.Name</h3>
+
+    <p>
+        <strong>Product ID:</strong>
+        @Model.Id
+    </p>
+
+    <p>
+        <strong>Category:</strong>
+        @Model.Category
+    </p>
+
+    <p>
+        <strong>Price:</strong>
+        ₹@Model.Price
+    </p>
+
+    <p>
+        <strong>Description:</strong>
+        @Model.Description
+    </p>
+
+    <p>
+        <strong>Parameter Passed:</strong>
+        @Model.Id
+    </p>
+
+    <hr />
+
+    <h4>Test Parameters</h4>
+
+    <p>
+        <a href="@Url.Action("Details", "Product", new { id = 1 })">
+            Product 1
+        </a>
+        |
+        <a href="@Url.Action("Details", "Product", new { id = 2 })">
+            Product 2
+        </a>
+        |
+        <a href="@Url.Action("Details", "Product", new { id = 3 })">
+            Product 3
+        </a>
+    </p>
+
+    <br />
+
+    <a href="@Url.Action("Index", "Product")">
+        Back to Products
+    </a>
+
+</div>
